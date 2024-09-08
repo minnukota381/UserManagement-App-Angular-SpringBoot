@@ -47,7 +47,6 @@ export class UserListComponent implements OnInit {
 
   editUser(user: User): void {
     console.log(`Edit user with ID: ${user.id}`);
-    // Implement navigation or logic to edit the user
   }
 
   deleteUser(user: User): void {
