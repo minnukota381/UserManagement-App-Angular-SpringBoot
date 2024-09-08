@@ -1,9 +1,52 @@
 /* src/app/home/home.component.css */
-.container {
-  text-align: center;
-  padding: 20px;
+.toolbar-spacer {
+  flex: 1 1 auto;
 }
 
-nav a {
-  margin: 0 10px;
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.user-create-card,
+.user-list-card {
+  margin: 20px;
+  flex: 1 1 400px;
+}
+
+.user-create-card {
+  max-width: 400px;
+}
+
+.user-list-card {
+  min-width: 600px;
+}
+
+@media (max-width: 1024px) {
+
+  .user-create-card,
+  .user-list-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: unset;
+  }
+}
+
+mat-card-header {
+  background-color: #f5f5f5;
+  padding: 16px;
+}
+
+mat-card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+mat-card-content {
+  padding: 16px;
 }

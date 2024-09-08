@@ -1,5 +1,31 @@
-<div>
-  <h1>{{ title }}</h1>
-  <app-user-create></app-user-create>  <!-- Add UserCreateComponent -->
-  <app-user-list></app-user-list>      <!-- Add UserListComponent -->
+<!-- src/app/home/home.component.html -->
+<mat-toolbar color="primary">
+  <span>{{ title }}</span>
+  <span class="toolbar-spacer"></span>
+  <button mat-icon-button aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="content-container">
+  <mat-card class="user-create-card">
+    <mat-card-header>
+      <mat-card-title>Create New User</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-user-create></app-user-create>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="user-list-card">
+    <mat-card-header>
+      <mat-card-title>User List</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-user-list></app-user-list>
+    </mat-card-content>
+  </mat-card>
 </div>
