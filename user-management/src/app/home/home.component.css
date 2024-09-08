@@ -1,0 +1,9 @@
+/* src/app/home/home.component.css */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+}
