@@ -1,64 +1,27 @@
-/* src/app/user-create/user-create.component.css */
-
+/* user-create.component.css */
 .container {
-  max-width: 600px;
+  max-width: 400px;
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #3f51b5;
 }
 
-.user-form {
+form {
   display: flex;
   flex-direction: column;
 }
 
-.form-group {
+mat-form-field {
   margin-bottom: 15px;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-control {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.form-control:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
-}
-
-.btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-.btn:focus {
-  outline: none;
+button {
+  align-self: center;
+  min-width: 150px;
 }

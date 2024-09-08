@@ -1,9 +1,28 @@
-<form (ngSubmit)="onSubmit()" #userForm="ngForm">
-  <label for="name">Name:</label>
-  <input type="text" id="name" [(ngModel)]="user.name" name="name" required>
+<!-- user-create.component.html -->
+<div class="container mat-elevation-z8">
+  <h2 class="mat-h2">Create New User</h2>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter your name" required>
+      <mat-error *ngIf="userForm.get('name')?.hasError('required')">
+        Name is required
+      </mat-error>
+    </mat-form-field>
 
-  <label for="age">Age:</label>
-  <input type="number" id="age" [(ngModel)]="user.age" name="age" required>
+    <mat-form-field appearance="outline">
+      <mat-label>Age</mat-label>
+      <input matInput type="number" formControlName="age" placeholder="Enter your age" required>
+      <mat-error *ngIf="userForm.get('age')?.hasError('required')">
+        Age is required
+      </mat-error>
+      <mat-error *ngIf="userForm.get('age')?.hasError('min') || userForm.get('age')?.hasError('max')">
+        Age must be between 1 and 120
+      </mat-error>
+    </mat-form-field>
 
-  <button type="submit">Create User</button>
-</form>
+    <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">
+      Create User
+    </button>
+  </form>
+</div>
